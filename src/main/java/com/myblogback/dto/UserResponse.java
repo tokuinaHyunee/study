@@ -1,6 +1,6 @@
-package com.myblog.dto;
+package com.myblogback.dto;
 
-import com.myblog.domain.entity.User;
+import com.myblogback.domain.entity.User;
 import java.time.LocalDateTime;
 
 public record UserResponse (

@@ -1,10 +1,10 @@
-package com.myblog.service;
+package com.myblogback.service;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import com.myblog.domain.entity.User;
-import com.myblog.dto.LoginRequest;
-import com.myblog.dto.SignupRequest;
-import com.myblog.repository.UserRepository;
+import com.myblogback.domain.entity.User;
+import com.myblogback.dto.LoginRequest;
+import com.myblogback.dto.SignupRequest;
+import com.myblogback.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,6 +23,7 @@ public class UserService {
         User user = User.builder()
                     .email(request.email())
                     .passwordHash(hash)
+                    .nickname(request.nickname())
                     .build();
         return userRepository.save(user);
     } // 이메일 중복체크 = 비밀번호 해시 후 저장

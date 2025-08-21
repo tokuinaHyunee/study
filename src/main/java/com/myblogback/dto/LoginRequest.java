@@ -1,4 +1,4 @@
-package com.myblog.dto;
+package com.myblogback.dto;
 
 import jakarta.validation.constraints.*;
 
